@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Effects & DoT's</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+    <h1>Status Effects & DoT's</h1>
+    <p>Tabela de todos os Efeitos/DoT's do jogo</p>
+    <div class="credits">Feito por: Killua 愛, Shiba & lyr1cs</div>
+    <div class="dot-info-container">
+        <button class="info-btn" onclick="toggleDotInfo()">O que é DoT?</button>
+        <div id="dotExplanation" class="explanation-box" style="display: none;">
+            <p><strong>DoT</strong> significa <em>Dmg over Time</em>(Dano durante o tempo). São efeitos em que o dano da unit continua com base em uma % (Porcentagem) ou um X (Multiplicador) EX: Bleed, Poison, Burn.</p>
+        </div>
+    </div>
+</header>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Pesquisar efeito (Ex: Burn, Freeze, Stun)..." onkeyup="filterEffects()">
+    </div>
+
+    <div class="filters">
+        <button class="filter-btn active" onclick="filterCategory('all', this)">Todos</button>
+        <button class="filter-btn" onclick="filterCategory('dot', this)">DoT</button>
+        <button class="filter-btn" onclick="filterCategory('efeito', this)">Efeito</button>
+    </div>
+
+    <div class="grid" id="effectsGrid">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+:root {
+    --bg-color: #0f1117;
+    --card-bg: #1a1d29;
+    --accent: #8b5cf6;
+    --accent-hover: #7c3aed;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --border: #2d3748;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 2rem 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.credits {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-container input:focus {
+    border-color: var(--accent);
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background-color: var(--card-bg);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.2s, border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.card img.effect-img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.tag {
+    align-self: flex-start;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--accent);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+.dot-info-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-btn {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.info-btn:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+.explanation-box {
+    max-width: 500px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: left;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Estado padrão (antes de passar o mouse) */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border); /* Usa a cor de borda cinza padrão */
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.2s, border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card.effect-black-flames:hover { border-color: #8b0000; }
+.card.effect-black-flames:hover h3 { color: #8b0000; }
+
+.card.effect-bleed:hover { border-color: #ff0000; }
+.card.effect-bleed:hover h3 { color: #ff0000; }
+
+.card.effect-burn:hover { border-color: #ffae42; }
+.card.effect-burn:hover h3 { color: #ffae42; }
+
+.card.effect-electrified:hover { border-color: #0047ab; }
+.card.effect-electrified:hover h3 { color: #0047ab; }
+
+.card.effect-poison:hover { border-color: #4b0082; }
+.card.effect-poison:hover h3 { color: #4b0082; }
+
+.card.effect-crippled:hover { border-color: #d3d3d3; }
+.card.effect-crippled:hover h3 { color: #d3d3d3; }
+
+.card.effect-freeze:hover { border-color: #00ffff; }
+.card.effect-freeze:hover h3 { color: #00ffff; }
+
+.card.effect-fear:hover { border-color: #4f4f4f; }
+.card.effect-fear:hover h3 { color: #4f4f4f; }
+
+.card.effect-slow:hover { border-color: #90ee90; }
+.card.effect-slow:hover h3 { color: #90ee90; }
+
+.card.effect-stun:hover { border-color: #a020f0; }
+.card.effect-stun:hover h3 { color: #a020f0; }
