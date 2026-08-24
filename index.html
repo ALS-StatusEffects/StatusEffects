@@ -15,7 +15,7 @@
     <div class="dot-info-container">
         <button class="info-btn" onclick="toggleDotInfo()">O que é DoT?</button>
         <div id="dotExplanation" class="explanation-box" style="display: none;">
-            <p><strong>DoT</strong> significa <em>Dmg over Time</em>(Dano durante o tempo). São efeitos em que o dano da unit continua com base em uma % (Porcentagem) ou um X (Multiplicador) EX: Bleed, Poison, Burn.</p>
+            <p><strong>DoT</strong> significa <em>Dmg over Time</em> (Dano durante o tempo). São efeitos em que o dano da unit continua com base em uma % (Porcentagem) ou um X (Multiplicador) EX: Bleed, Poison, Burn.</p>
         </div>
     </div>
 </header>
@@ -34,5 +34,13 @@
     </div>
 
     <script src="script.js"></script>
+
+    
+    <div id="gifModal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img id="modalImg" src="" alt="GIF Ampliado">
+    </div>
+</div>
 </body>
 </html>
