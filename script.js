@@ -131,6 +131,15 @@ function toggleDotInfo() {
     }
 }
 
+function toggleDotStackInfo() {
+    const box = document.getElementById('dotstackExplanation');
+    if (box.style.display === 'none' || box.style.display === '') {
+        box.style.display = 'block';
+    } else {
+        box.style.display = 'none';
+    }
+}
+
 renderEffects(effects);
 
 function openModal(imageSrc, slug) {

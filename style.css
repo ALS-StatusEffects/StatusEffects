@@ -210,6 +210,55 @@ header p {
     }
 }
 
+.dot-stack-info-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stack-btn {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.stack-btn:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+.stackexplanation-box {
+    max-width: 500px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: left;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .card {
     background-color: var(--card-bg);
     border: 1px solid var(--border);
@@ -383,5 +432,23 @@ footer {
 
 .footer-content p {
     font-size: 0.9rem;
-    text-align: center;
+    text-align: center; 
+}
+
+.header-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.dot-info-container, 
+.dot-stack-info-container {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }

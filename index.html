@@ -9,14 +9,24 @@
 </head>
 <body>
 
-    <header>
+<header>
     <h1>Status Effects & DoT's</h1>
     <p>Tabela de todos os Efeitos/DoT's do jogo</p>
     <div class="credits">Feito por: Killua 愛, Shiba & lyr1cs</div>
-    <div class="dot-info-container">
-        <button class="info-btn" onclick="toggleDotInfo()">O que é DoT?</button>
-        <div id="dotExplanation" class="explanation-box" style="display: none;">
-            <p><strong>DoT</strong> significa <em>Dmg over Time</em> (Dano durante o tempo). São efeitos em que o dano da unit continua com base em uma % (Porcentagem) ou um X (Multiplicador) EX: Bleed, Poison, Burn.</p>
+    
+    <div class="header-buttons-container">
+        <div class="dot-info-container">
+            <button class="info-btn" onclick="toggleDotInfo()">O que seria DoT?</button>
+            <div id="dotExplanation" class="explanation-box" style="display: none;">
+                <p><strong>DoT</strong> significa <em>Dmg over Time</em> (Dano durante o tempo). São efeitos em que o dano da unit continua com base em uma % (Porcentagem) ou um X (Multiplicador) EX: Bleed, Poison, Burn.</p>
+            </div>
+        </div>
+        
+        <div class="dot-stack-info-container">
+            <button class="stack-btn" onclick="toggleDotStackInfo()">O que seria "DoT Stackavel"?</button>
+            <div id="dotstackExplanation" class="stackexplanation-box" style="display: none;">
+                <p><strong>DoT Stackavel</strong> significa que tal DoT acumula várias vezes um sobre o outro a cada ataque das units (Sem contar Multi-Hits)</p>
+            </div>
         </div>
     </div>
 </header>
